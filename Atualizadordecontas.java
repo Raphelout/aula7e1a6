@@ -10,9 +10,10 @@ public class Atualizadordecontas {
     }
 
     public void att(Conta conta){
-        System.out.println("o saldo antigo da conta: " + conta.getSaldo());
+        System.out.println("\no saldo antigo da conta " + conta.getTipoconta() + ":" + conta.getSaldo());
         conta.atualiza(this.selic);
-        saldototal = conta.getSaldo();
+        saldototal += conta.getSaldo();
+        System.out.println("o saldo novo da conta: "+ conta.getSaldo() );
     }   
 }
 
