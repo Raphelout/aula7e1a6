@@ -19,8 +19,12 @@ public class Main {
         ///cria contas e aloca dentro da array do banco
         Conta contaco = new Contacorrente();
         Conta contapo = new Contapoupanca();
-        bradesco.alocacontas(contaco);
-        bradesco.alocacontas(contapo);
+        Conta contaco2 = new Contacorrente();
+        Conta contapo2 = new Contapoupanca();
+        bradesco.adiciona(contaco);
+        bradesco.adiciona(contapo);
+        bradesco.adiciona(contaco2);
+        bradesco.adiciona(contapo2);
 
         //instancio o atualizador de contas e dou o selic de 0.05
         Atualizadordecontas atualizador = new Atualizadordecontas(0.05);
@@ -28,14 +32,24 @@ public class Main {
         ///deposito quanto dinheiro eu quiser usando o Scanner
         contaco.deposita();
         contapo.deposita();
+        contaco2.deposita();
+        contapo2.deposita();
         
         
         ///imprimir os dados do atualizador de contas
-        atualizador.att(contaco);
-        atualizador.att(contapo);
+        for (int i = 0;i<bradesco.arrayContas.length; i++){
+            if (bradesco.arrayContas[i] != null){
+                atualizador.att(bradesco.arrayContas[i]);
+            }
+        }
 
         ///imprime o saldo total da conta, vulgo conta corrente + poupança somados
         System.out.println("\no saldo total da conta é: " + atualizador.getSaldototal());
+
+
+        bradesco.pegaTotalDeContas();
+        ///lê o saldo da conta usando o indice dela
+        System.out.println("\nlendo o saldo da primeira conta corrente usando o indice: " + bradesco.pegaConta(0).getSaldo());
 
         ///fecha o leitor
         Leitor.close();
