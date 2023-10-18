@@ -26,6 +26,8 @@ public class Main {
         bradesco.adiciona(contaco2);
         bradesco.adiciona(contapo2);
 
+        System.out.println();
+        
         //instancio o atualizador de contas e dou o selic de 0.05
         Atualizadordecontas atualizador = new Atualizadordecontas(0.05);
         
