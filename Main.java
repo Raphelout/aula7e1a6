@@ -5,13 +5,19 @@ public class Main {
 
         
         ///criação de conta
-        Conta conta1 = new Conta();
+        Conta contaco = new Contacorrente();
+        Conta contapo = new Contapoupanca();
+
+        Atualizadordecontas atualizador = new Atualizadordecontas(0.05);
         
-        conta1.saldo = 10;
-        conta1.atualiza(1);
-
+        contaco.deposita();
+        contapo.deposita();
+        
+        
         ///imprimir saldo do coitado
-        System.out.println(conta1.saldo);
-
+        System.out.println(contaco.saldo);
+        atualizador.att(contaco);
+        atualizador.att(contapo);
+        System.out.println(atualizador.getSaldototal());
     }
 }
