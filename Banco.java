@@ -18,7 +18,7 @@ public class Banco {
     public void pegaTotalDeContas(){
         for (int i=0; i<arrayContas.length; i++){
             if (arrayContas[i] != null){
-                System.out.println("\nindice: " + i + "\ntipo: " + arrayContas[i].getTipoconta() + "\nsaldo: " + arrayContas[i].getSaldo());
+                System.out.println("\nindice: " + i + "\ntipo: " + arrayContas[i].getTipoconta() + "\nsaldo: " + arrayContas[i].getSaldo() + "R$");
             }
         }
     }
