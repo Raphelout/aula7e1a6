@@ -48,7 +48,6 @@ public class Main {
         ///imprime o saldo total da conta, vulgo conta corrente + poupança somados
         System.out.println("\no saldo total da conta é: " + atualizador.getSaldototal());
 
-
         bradesco.pegaTotalDeContas();
         ///lê o saldo da conta usando o indice dela
         System.out.println("\nlendo o saldo da primeira conta corrente usando o indice: " + bradesco.pegaConta(0).getSaldo());
