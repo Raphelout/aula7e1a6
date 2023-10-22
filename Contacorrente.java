@@ -21,7 +21,7 @@ public class Contacorrente extends Conta{
 
     ///deposita diferente do Conta porque ele tira 10 centavos de cada deposito, um roubo
     public void deposita(){ 
-            System.out.println("\ndigite o valor que quer depositar");
+            System.out.println("digite o valor que quer depositar");
             double quantdpo = Leitor.nextDouble();
             this.saldo += quantdpo - 0.10;
     }
