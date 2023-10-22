@@ -7,7 +7,7 @@ abstract public class Conta {
     Scanner Leitor = new Scanner(System.in);
 
     abstract public String getTipoconta();
-
+    abstract public void deposita();
 
     public static void setQuantcontas(int quantcontas){
         Conta.quantcontas = quantcontas;
@@ -24,6 +24,5 @@ abstract public class Conta {
     public void sacar(double quantiasaque){
         this.saldo -= quantiasaque;
     }
-    abstract public void deposita();
 
 }
