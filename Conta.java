@@ -6,6 +6,8 @@ abstract public class Conta {
 
     Scanner Leitor = new Scanner(System.in);
 
+    
+    abstract public void atualiza(double taxa);
     abstract public String getTipoconta();
     abstract public void deposita();
 
@@ -18,9 +20,7 @@ abstract public class Conta {
     public double getSaldo() {
         return saldo;
     }
-    public void atualiza(double taxa){
-        this.saldo += this.saldo * taxa;
-    }
+
     public void sacar(double quantiasaque){
         this.saldo -= quantiasaque;
     }
